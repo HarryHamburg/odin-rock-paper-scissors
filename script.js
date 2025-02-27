@@ -18,20 +18,38 @@ function getComputerChoice () {
 
 }
 
-console.log(getComputerChoice())
+//console.log(getComputerChoice())
 
-let humanChoice = prompt("Rock, Paper or Scissors?");
+//let humanChoice = prompt("Let's play! Type rock, paper or scissors");
 
 function getHumanChoice () {
+let humanChoice = prompt("Let's play! Type rock, paper or scissors");
 humanChoice = humanChoice.toLowerCase();
 if  (humanChoice === "rock" || humanChoice === "paper" || humanChoice === "scissors") {
     return humanChoice;
 }
 else {
-    return "invalid human input";
+    return alert("Unfortunately this game isn't that smart. You can only chose rock paper or scissors. Try again...");
 }
 
 }
 
-console.log(getHumanChoice());
+//console.log(getHumanChoice());
+
+let humanScore = 0; 
+let computerScore = 0;
+
+function playRound (human, computer) {
+
+if (human === "rock" && computer === "scissors") {
+    return alert("The computer chose scissors, you win!");
+}
+
+
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+console.log(playRound(humanSelection, computerSelection));
 
